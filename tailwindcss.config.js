@@ -8,7 +8,7 @@ export default {
     extend: {
        screens: {
         'smallMobile': { 'min': '320px', 'max': '360px' },
-        'middleMobile': { 'min': '481px', 'max': '640px' },
+        'middleMobile': { 'min': '361px', 'max': '640px' },
         'bigMobile': { 'min': '641px', 'max': '768px' },
         'tabletsInPortraitMode': { 'min': '769px', 'max': '1024px' },
         'landscapeTabletsAndSmallDesktops': { 'min': '1025px ', 'max': '1280px' },
