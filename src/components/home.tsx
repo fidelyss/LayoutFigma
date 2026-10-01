@@ -1,15 +1,8 @@
 const home = () => {
     return (
-        <section className="flex flex-col">
-            <div className="
-            flex 
-            flex-col 
-            bg-[#F5F7FA]
-            md:flex
-            md:flex-row"
-            >
-                
-            </div>
+        <section className="w-full h-screen grid grid-cols-2 bg-white">
+           <div className="w-auto h-[100px] bg-Error col-span-2"></div>
+           <div className="w-auto h-[100px] bg-Error"></div>
         </section>
     )
 }

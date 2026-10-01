@@ -1,10 +1,54 @@
 @config "../tailwindcss.config.js";
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
     box-sizing: border-box;
 }
-body{
+
+body {
     width: 100vw;
+}
+
+@theme {
+    --color-neutral-Black: #263238;
+    --color-neutral-D_Grey: #4D4D4D;
+    --color-neutral-Grey: #717171;
+    --color-neutral-L_Grey: #89939E;
+    --color-neutral-Grey-blue: #ABBED1;
+    --color-neutral-Silver: #F5F7FA;
+    --color-Primary: #28CB8B;
+    --color-Secondary: #263238;
+    --color-Info: #2194f3;
+    --color-Shade-1: #43A046;
+    --color-Shade-2: #388E3B;
+    --color-Shade-3: #237D31;
+    --color-Shade-4: #1B5E1F;
+    --color-Shade-5: #103E13;
+    --color-Tint-1: #66BB69;
+    --color-Tint-2: #81C784;
+    --color-Tint-3: #A5D6A7;
+    --color-Tint-4: #C8E6C9;
+    --color-Tint-5: #E8F5E9;
+    --color-Warning: #FBC02D;
+    --color-Error: #E53835;
+    --color-Success: #2E7D31;
+
+    
+    --shadow-shade-1: 0px 2px 4px rgba(171, 190, 209, 0.60);
+    --shadow-shade-2: 0px 4px 8px rgba(171, 190, 209, 0.40);
+    --shadow-shade-3: 0px 6px 12px rgba(171, 190, 209, 0.30);
+    --shadow-shade-4: 0px 8px 16px rgba(171, 190, 209, 0.40);
+    --shadow-shade-5: 0px 16px 32px rgba(171, 190, 209, 0.30);
+}
+
+.Headline-1 {
+    @apply text-[64px] leading-[76px] font-semibold
+}
+
+.Headline-2 {
+    @apply text-[36px] leading-[44px] font-semibold
+}
+
+.Headline-3 {
+    @apply text-[28px] leading-[36px] font-semibold
 }

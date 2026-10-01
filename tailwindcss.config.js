@@ -6,7 +6,8 @@ export default {
   ],
   theme: {
     extend: {
-       screens: {
+     
+      screens: {
         'smallMobile': { 'min': '320px', 'max': '360px' },
         'middleMobile': { 'min': '361px', 'max': '640px' },
         'bigMobile': { 'min': '641px', 'max': '768px' },

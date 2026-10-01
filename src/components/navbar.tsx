@@ -18,9 +18,9 @@ const Navbar = () => {
         >
             <img src="/nexvent.svg" alt="" />
             <nav className='relative w-fit '>
-                <div className='hidden sm:flex'>
+                <div className='hidden sm:flex font-laEle'>
                     <ul className='flex'>
-                        {list.map((value) => (<li>{value}</li>))}
+                        {list.map((value) => (<li>{value}</li> ))}
                     </ul>
                 </div>
 
@@ -33,20 +33,44 @@ const Navbar = () => {
                 >
                     <button
                         className={`
+                            relative
                             bg-[#4CAF4F]
-                            text-center
+                            flex
+                            row
+                            pr-1
+                            pl-1
+                            gap-0.5
+                            items-center
                             text-[#212121]
                             p-0.5
-                            rounded-2xl
-                            ${toggle ? 'rounded-bl-[0px] rounded-br-[0px]': ''}
+                            w-fit
+                            rounded-xl
+                            transition-shadow
+                            duration-500
+                            ease-in-out
+                            ${toggle ?
+                                `rounded-bl-[0px]
+                                 rounded-br-[0px]
+                                 shadow-[0_0_20px_0px_#4CAF4F]
+                                 `
+                                : ''
+                            }
                             smallMobile:text-[5vw]
                             middleMobile:text-[clamp(1.2rem,4vw,1.5rem)]
                             `}
                         onClick={() => setToggle((toggle) => !toggle)}
-                    >Opções</button>
+                    >
+                        <span className='w-[1em] h-[1em]'></span>
+                        <svg className={` transition-all duration-500 ease-in-out  absolute  left-0 top-1/2 -translate-y-1/2 w-[1em] h-[1em] ${toggle ? `left-1/2 -translate-x-1/2 ` : ``}}`} viewBox="0 0 80 80" width="30" height="40">
+                            <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                            <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                            <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                        </svg>
+                        <span className={`transition-all duration-400 ${toggle ? `opacity-0` : ``}`}>MENU</span>
+                    </button>
                     <ul
                         className={`
-                                ${toggle ? ' border-[#4CAF50] border-2 rounded-l-2xl rounded-br-2xl min-w-[110px] bg-[#212121] absolute top-full right-0 text-black' : 'hidden'}
+                                ${toggle ? ' border-[#4CAF50] border-2 rounded-l-2xl rounded-br-2xl min-w-[135px] bg-[#212121] absolute top-full right-0 text-black' : 'hidden'}
                                 `}
                     >
                         {
