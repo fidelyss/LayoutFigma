@@ -10,17 +10,19 @@ const Navbar = () => {
             flex-row
             justify-between
             items-center
-            w-full
+            w-full  
             h-auto
-            pl-3
-            pr-3
+            pl-6
+            pr-6
+            pl-
+            py-2.5
         '
         >
-            <img src="/nexvent.svg" alt="" />
+            <img src="/nexvent.svg" alt="" className='scale-135' />
             <nav className='relative w-fit '>
                 <div className='hidden sm:flex font-laEle'>
                     <ul className='flex'>
-                        {list.map((value) => (<li>{value}</li> ))}
+                        {list.map((value) => (<li>{value}</li>))}
                     </ul>
                 </div>
 
@@ -28,7 +30,6 @@ const Navbar = () => {
                     className='
                         sm:hidden
                         block
-                        pt-1
                     '
                 >
                     <button
@@ -37,14 +38,13 @@ const Navbar = () => {
                             bg-[#4CAF4F]
                             flex
                             row
-                            pr-1
+                            pr-2
                             pl-1
-                            gap-0.5
+                            gap-3
                             items-center
                             text-[#212121]
-                            p-0.5
                             w-fit
-                            rounded-xl
+                            rounded-[4px]
                             transition-shadow
                             duration-500
                             ease-in-out
@@ -61,7 +61,7 @@ const Navbar = () => {
                         onClick={() => setToggle((toggle) => !toggle)}
                     >
                         <span className='w-[1em] h-[1em]'></span>
-                        <svg className={` transition-all duration-500 ease-in-out  absolute  left-0 top-1/2 -translate-y-1/2 w-[1em] h-[1em] ${toggle ? `left-1/2 -translate-x-1/2 ` : ``}}`} viewBox="0 0 80 80" width="30" height="40">
+                        <svg className={` transition-all duration-500 ease-in-out  absolute  left-2 top-1/2 -translate-y-1/2 w-[1em] h-[1em] ${toggle ? `left-[50%] -translate-x-1/2 ` : ``}}`} viewBox="0 0 80 80" width="30" height="40">
                             <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
                             <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
                             <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>

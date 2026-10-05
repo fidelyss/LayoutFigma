@@ -4,8 +4,10 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <Home />
+      <div className='figma-layout:mx-[144.1px] mx-[64.1px] md:mx-[768.6] lg:mx-[102.4px]'>
+        <Navbar />
+        <Home />
+      </div>
     </>
   )
 }
