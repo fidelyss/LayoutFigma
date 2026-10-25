@@ -1,39 +1,45 @@
 import React, { useState } from 'react'
+import styles from "../styles.tsx"
 
 const Navbar = () => {
-    const list = ['home', 'about', 'comment']
+    const list = ['home', 'Features', 'Community', 'Blog', 'Pricing']
     const [toggle, setToggle] = useState(false)
     return (
-        <header
-            className='
-            flex
-            flex-row
-            justify-between
-            items-center
-            w-full  
-            h-auto
-            pl-6
-            pr-6
-            pl-
-            py-2.5
-        '
-        >
-            <img src="/nexvent.svg" alt="" className='scale-135' />
-            <nav className='relative w-fit '>
-                <div className='hidden sm:flex font-laEle'>
-                    <ul className='flex'>
-                        {list.map((value) => (<li>{value}</li>))}
-                    </ul>
-                </div>
+        <header>
+            <div className={`
+                ${styles.marginPage}
+                flex
+                flex-row
+                justify-between
+                items-center
+                w-auto  
+                h-auto
+                pl-6
+                pr-6
+                pl-
+                py-2.5
+                `}>
+                <img src="/nexvent.svg" alt="" className='scale-135' />
+                <nav className='relative w-fit '>
+                    <div className='hidden sm:flex'>
+                        <ul className='flex'>
+                            {list.map((value) => (<li>{value}</li>))}
+                        </ul>
+                        <button className='relative bg-Primary flex w-fit items-center gap-2 body-medium-2 px-3 py-1'>
+                            <span className='text-white'>Register Now</span>
+                            <span className=' w-[14.59px] h-[14.59px]'></span>
+                            <img className='absolute w-[14.59px] h-[14.59px] top-[37%] right-0 -translate-x-1/2' src="/iconRight.svg" alt="right arrow" />
+                        </button>
+                    </div>
 
-                <div
-                    className='
+                    <div
+                        className='
                         sm:hidden
                         block
                     '
-                >
-                    <button
-                        className={`
+                    >
+                        <button
+                            className={`
                             relative
                             bg-[#4CAF4F]
                             flex
@@ -49,41 +55,41 @@ const Navbar = () => {
                             duration-500
                             ease-in-out
                             ${toggle ?
-                                `rounded-bl-[0px]
+                                    `rounded-bl-[0px]
                                  rounded-br-[0px]
-                                 shadow-[0_0_20px_0px_#4CAF4F]
+                                 
                                  `
-                                : ''
-                            }
+                                    : ''
+                                }
                             smallMobile:text-[5vw]
                             middleMobile:text-[clamp(1.2rem,4vw,1.5rem)]
                             `}
-                        onClick={() => setToggle((toggle) => !toggle)}
-                    >
-                        <span className='w-[1em] h-[1em]'></span>
-                        <svg className={` transition-all duration-500 ease-in-out  absolute  left-2 top-1/2 -translate-y-1/2 w-[1em] h-[1em] ${toggle ? `left-[50%] -translate-x-1/2 ` : ``}}`} viewBox="0 0 80 80" width="30" height="40">
-                            <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
-                            <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
-                            <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
-                        </svg>
-                        <span className={`transition-all duration-400 ${toggle ? `opacity-0` : ``}`}>MENU</span>
-                    </button>
-                    <ul
-                        className={`
+                            onClick={() => setToggle((toggle) => !toggle)}
+                        >
+                            <span className='w-[1em] h-[1em]'></span>
+                            <svg className={` transition-all duration-500 ease-in-out  absolute  left-2 top-1/2 -translate-y-1/2 w-[1em] h-[1em] ${toggle ? `left-[50%] -translate-x-1/2 ` : ``}}`} viewBox="0 0 80 80" width="30" height="40">
+                                <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                                <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                                <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                            </svg>
+                            <span className={`transition-all duration-400 ${toggle ? `opacity-0` : ``}`}>MENU</span>
+                        </button>
+                        <ul
+                            className={`
                                 ${toggle ? ' border-[#4CAF50] border-2 rounded-l-2xl rounded-br-2xl min-w-[135px] bg-[#212121] absolute top-full right-0 text-black' : 'hidden'}
                                 `}
-                    >
-                        {
-                            list.map(value => (
-                                <li className='p-1.5 first:rounded-tl-[14px] last:rounded-bl-[14px] last:rounded-br-[14px] text-[#4CAF50] pt-1 hover:text-black hover:bg-[#4CAF50]
+                        >
+                            {
+                                list.map(value => (
+                                    <li className='p-1.5 first:rounded-tl-[14px] last:rounded-bl-[14px] last:rounded-br-[14px] text-[#4CAF50] pt-1 hover:text-black hover:bg-[#4CAF50]
 
                                     '>{value}</li>
-                            ))
-                        }
-                    </ul>
-                </div>
-            </nav>
-
+                                ))
+                            }
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </header>
     )
 }

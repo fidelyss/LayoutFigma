@@ -11,7 +11,9 @@ body {
 
 @theme {
 
+    --breakpoint-notebook-medium: 1280px;
     --breakpoint-figma-layout: 1440px;
+    --breakpoint-notebook: 1536px;
 
     --color-neutral-Black: #263238;
     --color-neutral-D_Grey: #4D4D4D;
@@ -19,7 +21,7 @@ body {
     --color-neutral-L_Grey: #89939E;
     --color-neutral-Grey-blue: #ABBED1;
     --color-neutral-Silver: #F5F7FA;
-    --color-Primary: #28CB8B;
+    --color-Primary: #4CAF4F;
     --color-Secondary: #263238;
     --color-Info: #2194f3;
     --color-Shade-1: #43A046;
@@ -54,4 +56,30 @@ body {
 
 .Headline-3 {
     @apply text-[28px] leading-[36px] font-semibold
+}
+
+@layer base {
+    .body-1 {
+        @apply text-[36px] leading-[44px] font-normal not-italic
+    }
+
+    .body-4 {
+        @apply text-[12px] leading-[16px] font-normal not-italic
+    }
+
+    .body-medium-2 {
+        @apply text-[18px] leading-[24px] font-normal not-italic
+    }
+}
+
+.icon-1 {
+    @apply w-[32px] h-[32px]
+}
+
+.icon-2 {
+    @apply w-[48px] h-[48px]
+}
+
+.icon-3 {
+    @apply w-[64px] h-[64px]
 }
