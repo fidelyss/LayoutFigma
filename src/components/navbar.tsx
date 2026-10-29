@@ -25,16 +25,18 @@ const Navbar = () => {
                         <ul className='flex'>
                             {list.map((value) => (<li>{value}</li>))}
                         </ul>
-                        <button className='relative bg-Primary flex w-fit items-center gap-2 body-medium-2 px-3 py-1'>
-                            <span className='text-white'>Register Now</span>
-                            <span className=' w-[14.59px] h-[14.59px]'></span>
-                            <img className='absolute w-[14.59px] h-[14.59px] top-[37%] right-0 -translate-x-1/2' src="/iconRight.svg" alt="right arrow" />
-                        </button>
+                        <button className='relative bg-Primary testOne:testOne testTwo:testTwo flex w-fit h-fit items-center gap-2'>
+                            <div className='py-[0.5em] px-[2em]'>
+                                <label className='text-white'>Register Now</label>
+                                <span className=' w-[14.59px] h-[14.59px]'></span>
+                                <img className='absolute w-[14.59px] h-[14.59px] top-[37%] right-0 -translate-x-1/2' src="/iconRight.svg" alt="right arrow" />
+                            </div>
+                        </button>   
                     </div>
 
                     <div
                         className='
-                        sm:hidden
+                        sm:hidden 
                         block
                     '
                     >

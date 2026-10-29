@@ -14,6 +14,8 @@ body {
     --breakpoint-notebook-medium: 1280px;
     --breakpoint-figma-layout: 1440px;
     --breakpoint-notebook: 1536px;
+    --breakpoint-testOne: 999px;
+    --breakpoint-testTwo: 1530px;
 
     --color-neutral-Black: #263238;
     --color-neutral-D_Grey: #4D4D4D;
@@ -70,6 +72,20 @@ body {
     .body-medium-2 {
         @apply text-[18px] leading-[24px] font-normal not-italic
     }
+
+    .body-medium-3 {
+        @apply text-[12px] leading-[16px] font-normal not-italic
+    }
+
+}
+
+
+@utility testOne {
+    @apply text-[32px] leading-[16px] font-normal not-italic;
+}
+
+@utility testTwo {
+    @apply text-[64px] leading-[16px] font-normal not-italic;
 }
 
 .icon-1 {
